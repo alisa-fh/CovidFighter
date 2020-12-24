@@ -122,7 +122,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9175908019177799665}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -177,6 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbd11f378a3f4a77b7fbff3a432d344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileType: StoneProjectile
+  projectileSpeed: 5
+  attackCooldown: 3
 --- !u!58 &4303025084758599531
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -190,6 +193,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0055146897, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.45844778
