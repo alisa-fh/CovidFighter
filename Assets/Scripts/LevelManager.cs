@@ -50,6 +50,8 @@ public class LevelManager : Singleton<LevelManager>
     // Start is called before the first frame update
     void Start()
     {
+        //Camera.main.transform = new Vector3(-43.89, 27.71, -10);
+
         CreateLevel();
         
     }
