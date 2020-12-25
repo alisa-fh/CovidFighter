@@ -26,6 +26,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private GameObject waveBtn;
 
+    private int enemyHealth = 15;
+
     private int health;
     [SerializeField]
     private Text healthText;
@@ -178,7 +180,12 @@ public class GameManager : Singleton<GameManager>
             }
             Enemy enemy = Pool.GetObject(type).GetComponent<Enemy>(); //instantiate and return a new gameobject
             activeEnemies.Add(enemy);
-            enemy.Spawn();
+            enemy.Spawn(enemyHealth);
+            //increase difficulty i.e. enemy health each wave
+            if (wave != 1) 
+            {
+                enemyHealth += 3;
+            }
             yield return new WaitForSeconds(2.5f); 
             
         } 

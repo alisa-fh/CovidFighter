@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: -3863141366982072432}
   - component: {fileID: 4982068902944230137}
   m_Layer: 0
-  m_Name: ground_tiles_6
-  m_TagString: Untagged
+  m_Name: grass2
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d32b0c53c9c4baa97d5005552589cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
 --- !u!61 &4982068902944230137
 BoxCollider2D:
   m_ObjectHideFlags: 0

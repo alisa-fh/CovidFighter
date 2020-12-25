@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Singleton<Enemy>
 {
     [SerializeField]
     private float speed;
@@ -12,7 +12,28 @@ public class Enemy : MonoBehaviour
     private Vector3 destination;
     public SpawnPlace[] TreeScript;
     private Animator myAnimator;
+    public Animator MyAnimator
+    {
+        get 
+        {
+            return myAnimator;
+        }
+    }
+    private SpriteRenderer spriteRenderer;
     public bool IsActive{get; set;}
+
+    [SerializeField]
+    private Stat enemyHealth;
+    public bool Alive 
+    {
+        get {return enemyHealth.CurrentVal > 0;}
+    }
+
+    private void Awake()
+    {
+        enemyHealth.Initialise();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     private void Update()
     {
@@ -44,13 +65,20 @@ public class Enemy : MonoBehaviour
             destination = path.Pop().WorldPosition;
         }
     }
-    public void Spawn()
+    public void Spawn(int enemyHealth)
     {
         SpawnPlace[] TreeScript = LevelManager.Instance.TreeScript;
         treeIndex = UnityEngine.Random.Range(0,9);
         transform.position = TreeScript[treeIndex].transform.position;
+        
+        this.enemyHealth.Bar.Reset();
+        this.enemyHealth.MaxVal = enemyHealth;
+        this.enemyHealth.CurrentVal = this.enemyHealth.MaxVal;
+
+        Awake();
         StartCoroutine(Scale(new Vector3(0.1f, 0.1f), new Vector3(1,1), false));
         myAnimator = GetComponent<Animator>();
+
         //transform.position = LevelManager.Instance.TreeScript[treeIndex].transform.position;
         //Debug.Log(LevelManager.Instance.PathArray.Length);
         //Debug.Log(LevelManager.Instance.PathArray[treeIndex].Count);
@@ -90,13 +118,32 @@ public class Enemy : MonoBehaviour
             StartCoroutine(Scale(new Vector3(1, 1), new Vector3(0.1f, 0.1f), true));
             GameManager.Instance.Health = GameManager.Instance.Health - 30 ;
         }
+        else if (other.tag == "Tile")
+        {
+            spriteRenderer.sortingOrder = other.GetComponent<TileScript>().GridPosition.Y;
+        }
     }
 
-    private void Release()
+    public void Release()
     {
         IsActive = false;
-        myAnimator.SetInteger("Dying", 0);
         GameManager.Instance.Pool.ReleaseObject(gameObject);
         GameManager.Instance.RemoveEnemy(this);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (IsActive)
+        {
+            enemyHealth.CurrentVal -= damage;
+            if (enemyHealth.CurrentVal <= 0)
+            {
+                GameManager.Instance.Currency += 1;
+                myAnimator.SetTrigger("Dying");
+                IsActive = false;
+                GetComponent<SpriteRenderer>().sortingOrder--; //other monsters can step over it
+            }
+        }
+   
     }
 }

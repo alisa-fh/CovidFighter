@@ -195,4 +195,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileType: FireProjectile
   projectileSpeed: 5
+  damage: 10
   attackCooldown: 3

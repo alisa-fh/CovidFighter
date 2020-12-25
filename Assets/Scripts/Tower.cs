@@ -25,6 +25,17 @@ public class Tower : MonoBehaviour
             return target;
         }
     }
+
+    [SerializeField]
+    private int damage;
+    public int Damage
+    {
+        get 
+        {
+            return damage;
+        }
+    }
+
     private bool canAttack = true;
     private float attackTimer; //when able to attack again
     [SerializeField]
@@ -41,7 +52,6 @@ public class Tower : MonoBehaviour
     void Update()
     {
         Attack();
-        Debug.Log(target);
     }
 
     public void Select()
@@ -73,6 +83,15 @@ public class Tower : MonoBehaviour
             }
             
         }
+        //uncomment to change target once one has died
+        // else if (enemies.Count > 0)
+        // {
+        //     target = enemies.Dequeue();
+        // }
+        // if (target != null && !target.Alive)
+        // {
+        //     target = null;
+        // }
     }
 
     private void Shoot()
@@ -84,7 +103,6 @@ public class Tower : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("collision");
         if (other.tag == "Enemy") 
         {
             enemies.Enqueue(other.GetComponent<Enemy>());
@@ -95,7 +113,6 @@ public class Tower : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            Debug.Log("enemy exit");
             target = null;
         }
     }

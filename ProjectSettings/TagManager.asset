@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WaterBridge
   - Enemy
+  - Tile
   layers:
   - Default
   - TransparentFX

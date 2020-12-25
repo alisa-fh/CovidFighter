@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4447172951105450234}
   - component: {fileID: 2881033028417148243}
   - component: {fileID: -1878858843259123226}
+  - component: {fileID: -2478092233150859809}
+  - component: {fileID: -1660816674683788535}
   m_Layer: 0
   m_Name: StoneProjectile
   m_TagString: Untagged
@@ -94,3 +96,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5341d0e65c0412bac90bb26c7068f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &-2478092233150859809
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2234811169429312775}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.33333334, y: 0.26666668}
+    newSize: {x: 0.4, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.33333334, y: 0.26666668}
+  m_EdgeRadius: 0
+--- !u!95 &-1660816674683788535
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2234811169429312775}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dbb06ba0e51d94189a1ee326f4ad1e2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

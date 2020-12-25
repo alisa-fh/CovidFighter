@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: -4990846210101795886}
   - component: {fileID: -5149642331619152644}
   m_Layer: 0
-  m_Name: ground_tiles_41
-  m_TagString: Untagged
+  m_Name: stone1
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d32b0c53c9c4baa97d5005552589cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
 --- !u!61 &-5149642331619152644
 BoxCollider2D:
   m_ObjectHideFlags: 0

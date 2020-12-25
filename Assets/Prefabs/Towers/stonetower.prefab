@@ -179,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileType: StoneProjectile
   projectileSpeed: 5
+  damage: 7
   attackCooldown: 3
 --- !u!58 &4303025084758599531
 CircleCollider2D:

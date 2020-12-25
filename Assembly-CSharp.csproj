@@ -36,9 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\DeathBehaviour.cs" />
+     <Compile Include="Assets\ImpactBehaviour.cs" />
      <Compile Include="Assets\Scripts\Astar\AStar.cs" />
      <Compile Include="Assets\Scripts\Astar\AStarDebugger.cs" />
      <Compile Include="Assets\Scripts\Astar\Node.cs" />
+     <Compile Include="Assets\Scripts\BarScript.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Hover.cs" />
@@ -48,6 +51,7 @@
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Singleton.cs" />
      <Compile Include="Assets\Scripts\SpawnPlace.cs" />
+     <Compile Include="Assets\Scripts\Stat.cs" />
      <Compile Include="Assets\Scripts\TileScript.cs" />
      <Compile Include="Assets\Scripts\Tower.cs" />
      <Compile Include="Assets\Scripts\TowerBtn.cs" />

@@ -1,0 +1,596 @@
+fileFormatVersion: 2
+guid: a4476f1e602794b408b06e8c439f0483
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4786170606154057404
+    second: greenDeathSheet_0
+  - first:
+      213: -3913464516905994981
+    second: greenDeathSheet_1
+  - first:
+      213: -4911264929765677973
+    second: greenDeathSheet_2
+  - first:
+      213: -3295663142456139778
+    second: greenDeathSheet_3
+  - first:
+      213: 4724805993147695348
+    second: greenDeathSheet_4
+  - first:
+      213: 4859651346396345873
+    second: greenDeathSheet_5
+  - first:
+      213: 474090237645930272
+    second: greenDeathSheet_6
+  - first:
+      213: 8613191010614731732
+    second: greenDeathSheet_7
+  - first:
+      213: 252167362347614494
+    second: greenDeathSheet_8
+  - first:
+      213: 2072539465206345130
+    second: greenDeathSheet_9
+  - first:
+      213: -3861550226232542296
+    second: greenDeathSheet_10
+  - first:
+      213: -4910761587253519487
+    second: greenDeathSheet_11
+  - first:
+      213: -3753486098909421238
+    second: greenDeathSheet_12
+  - first:
+      213: 7931246778761382763
+    second: greenDeathSheet_13
+  - first:
+      213: 858409481704238768
+    second: greenDeathSheet_14
+  - first:
+      213: 8924682026751646650
+    second: greenDeathSheet_15
+  - first:
+      213: 595707815740403417
+    second: greenDeathSheet_16
+  - first:
+      213: 632083436710658435
+    second: greenDeathSheet_17
+  - first:
+      213: -826902319430903152
+    second: greenDeathSheet_18
+  - first:
+      213: 4528250961351607034
+    second: greenDeathSheet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: greenDeathSheet_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 50
+        width: 362
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb68a3edec4eb6240800000000000000
+      internalID: 4786170606154057404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_1
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 77
+        width: 303
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15f8bc91c490b9c0800000000000000
+      internalID: -3913464516905994981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_2
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 59
+        width: 354
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64ab7f319ea7dbb0800000000000000
+      internalID: -4911264929765677973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 54
+        width: 358
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effdd8645d37342d0800000000000000
+      internalID: -3295663142456139778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 63
+        width: 340
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f084368402e19140800000000000000
+      internalID: 4724805993147695348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_5
+      rect:
+        serializedVersion: 2
+        x: 2388
+        y: 68
+        width: 331
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116f33ae623f07340800000000000000
+      internalID: 4859651346396345873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_6
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 73
+        width: 317
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02fbd5e2f8e449600800000000000000
+      internalID: 474090237645930272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_7
+      rect:
+        serializedVersion: 2
+        x: 3335
+        y: 86
+        width: 290
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3674ae693388770800000000000000
+      internalID: 8613191010614731732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_8
+      rect:
+        serializedVersion: 2
+        x: 3802
+        y: 91
+        width: 285
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e114da841e0ef7300800000000000000
+      internalID: 252167362347614494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_9
+      rect:
+        serializedVersion: 2
+        x: 4273
+        y: 95
+        width: 272
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad2a9ea9a323cc10800000000000000
+      internalID: 2072539465206345130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_10
+      rect:
+        serializedVersion: 2
+        x: 4740
+        y: 104
+        width: 262
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab74135784096ac0800000000000000
+      internalID: -3861550226232542296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_11
+      rect:
+        serializedVersion: 2
+        x: 5211
+        y: 109
+        width: 249
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bde1fca5879dbb0800000000000000
+      internalID: -4910761587253519487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_12
+      rect:
+        serializedVersion: 2
+        x: 5678
+        y: 109
+        width: 244
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a412325a740f8ebc0800000000000000
+      internalID: -3753486098909421238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_13
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 113
+        width: 241
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b880a7ce2711e60800000000000000
+      internalID: 7931246778761382763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_14
+      rect:
+        serializedVersion: 2
+        x: 6607
+        y: 113
+        width: 240
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0beeec420eea9eb00800000000000000
+      internalID: 858409481704238768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_15
+      rect:
+        serializedVersion: 2
+        x: 7073
+        y: 113
+        width: 240
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb58d1b407dadb70800000000000000
+      internalID: 8924682026751646650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_16
+      rect:
+        serializedVersion: 2
+        x: 7535
+        y: 113
+        width: 241
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de612b2a11644800800000000000000
+      internalID: 595707815740403417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_17
+      rect:
+        serializedVersion: 2
+        x: 7998
+        y: 113
+        width: 244
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3810c89698c95c800800000000000000
+      internalID: 632083436710658435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_18
+      rect:
+        serializedVersion: 2
+        x: 8464
+        y: 113
+        width: 241
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09adf5ab8b04684f0800000000000000
+      internalID: -826902319430903152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: greenDeathSheet_19
+      rect:
+        serializedVersion: 2
+        x: 8927
+        y: 113
+        width: 240
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af20f25f14497de30800000000000000
+      internalID: 4528250961351607034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
