@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     private Enemy target;
     private Tower parent;
     private Animator myAnimator;
+    private Element elementType;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +25,12 @@ public class Projectile : MonoBehaviour
     {
         this.target = parent.Target;
         this.parent = parent;
+        this.elementType = parent.ElementType;
     }
     private void MoveToTarget()
     {
         if (target != null && target.IsActive)
         {
-            Debug.Log("about to set to dying");
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * parent.ProjectileSpeed);
             Vector2 dir = target.transform.position - transform.position;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -46,7 +47,6 @@ public class Projectile : MonoBehaviour
 
     private IEnumerator ExecuteAfterTime(float time)
     {
-        Debug.Log("about to set to alive");
         yield return new WaitForSeconds(time);
         target.MyAnimator.SetInteger("Dying", 0);
     }
@@ -57,12 +57,23 @@ public class Projectile : MonoBehaviour
         {
             if (target.gameObject == other.gameObject)
             {
-                target.TakeDamage(parent.Damage); //takes tower (parent)'s damage
+                target.TakeDamage(parent.Damage, elementType); //takes tower (parent)'s damage
                 myAnimator.SetTrigger("Impact");
+                ApplyDebuff();
             }
             Enemy hitInfo = other.GetComponent<Enemy>();
             
         }
+    }
+
+    private void ApplyDebuff()
+    {
+        float roll = Random.Range(0, 100);
+        if (roll <= parent.Proc)
+        {
+            target.AddDebuff(parent.GetDebuff());
+        }
+
     }
     
 }

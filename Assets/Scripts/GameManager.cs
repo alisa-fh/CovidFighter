@@ -4,8 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+public delegate void CurrencyChanged(); //way of triggering event
+
 public class GameManager : Singleton<GameManager>
 { 
+    [SerializeField]
+    public GameObject gameMenu;
+    [SerializeField]
+    public GameObject optionsMenu;
+    public event CurrencyChanged Changed;
+
     public TowerBtn ClickedBtn { get; set; }
 
     public ObjectPool Pool { get; set; }
@@ -13,6 +21,18 @@ public class GameManager : Singleton<GameManager>
     private bool gameOver = false;
     [SerializeField]
     private GameObject gameOverMenu;
+
+    [SerializeField]
+    private GameObject upgradePanel;
+    [SerializeField]
+    private GameObject upgradeText;
+    [SerializeField]
+    private GameObject statsPanel;
+
+    [SerializeField]
+    private Text visualText;
+    [SerializeField]
+    private Text upgradePrice;
 
     //current selected tower
     private Tower selectedTower;
@@ -26,7 +46,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private GameObject waveBtn;
 
-    private int enemyHealth = 15;
+    private int enemyHealth = 18;
 
     private int health;
     [SerializeField]
@@ -73,6 +93,7 @@ public class GameManager : Singleton<GameManager>
         {
             this.currency = value;
             this.currencyText.text = value.ToString() + " coins";
+            OnCurrencyChanged();
         }
     }
 
@@ -83,6 +104,7 @@ public class GameManager : Singleton<GameManager>
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("gamestart");
         Health = 100;
         health = 100;
         Currency = 15;
@@ -113,6 +135,14 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    public void OnCurrencyChanged()
+    {
+        if (Changed != null)
+        {
+            Changed();
+        }
+    }
+
     public void SelectTower(Tower tower)
     {
         if (selectedTower != null)
@@ -121,6 +151,8 @@ public class GameManager : Singleton<GameManager>
         }
         selectedTower = tower;
         selectedTower.Select();
+
+        upgradePanel.SetActive(true);
     }
     public void DeselectTower()
     {
@@ -128,14 +160,27 @@ public class GameManager : Singleton<GameManager>
         {
             selectedTower.Select();
         }
+        upgradePanel.SetActive(false);
         selectedTower = null;
+        
     }
 // When escape is clicked, tower should be removed from cursor (or hidden)
     private void HandleEscape()
     {
       if (Input.GetKeyDown(KeyCode.Escape))
       {
-          Hover.Instance.Deactivate();
+          if (selectedTower == null && !Hover.Instance.IsVisible) 
+          {
+            ShowMenu();
+          }
+          else if (Hover.Instance.IsVisible)
+          {
+              DropTower();
+          }
+          else if (selectedTower != null)
+          {
+              DeselectTower();
+          }
       }  
     }
     public void StartWave() //triggered by next wave button
@@ -216,6 +261,90 @@ public class GameManager : Singleton<GameManager>
 
         }
     }
+
+    private void DropTower()
+    {
+        ClickedBtn = null;
+        Hover.Instance.Deactivate();
+    }
+
+    public void ShowTooltip()
+    {
+        statsPanel.SetActive(!statsPanel.activeSelf); 
+    }
+
+    public void ShowSelectedTowerStats()
+    {
+        statsPanel.SetActive(!statsPanel.activeSelf); 
+        UpdateUpgradeTip();
+    }
+    public void SetTooltipText(string text)
+    {
+        visualText.text = text;
+    }
+
+    public void UpdateUpgradeTip()
+    {
+        if (selectedTower != null)
+        {
+            SetTooltipText(selectedTower.GetStats());
+            if (selectedTower.NextUpgrade != null) 
+            {
+                upgradePrice.text = selectedTower.NextUpgrade.Price.ToString() + "coins";
+            }
+            else 
+            {
+                upgradePrice.text = "Complete";
+            }
+        }
+
+    }
+
+    public void UpgradeTower()
+    {
+        if (selectedTower != null)
+        {
+            if (selectedTower.Level <= selectedTower.Upgrades.Length && Currency >= selectedTower.NextUpgrade.Price)
+            {
+                selectedTower.Upgrade();
+            }
+        }   
+    }
+
+    public void ShowMenu()
+    {
+        if (optionsMenu.activeSelf)
+        {
+            BackToMain();
+        }
+        else 
+        {
+            gameMenu.SetActive(!gameMenu.activeSelf);
+            if (!gameMenu.activeSelf)
+            {
+                Time.timeScale = 1;
+            }
+            else 
+            {
+                Time.timeScale = 0;
+            }
+        }
+    }
+
+    public void ShowOptions()
+    {
+        gameMenu.SetActive(false);
+        optionsMenu.SetActive(true);
+    }
+
+    public void BackToMain()
+    {
+        optionsMenu.SetActive(false);
+        gameMenu.SetActive(true);
+    }
+
+    
+
 
     public void QuitGame()
     {

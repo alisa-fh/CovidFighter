@@ -98,6 +98,7 @@ public class TileScript : MonoBehaviour
         this.myTower = tower.transform.GetChild(0).GetComponent<Tower>();
         IsEmpty = false;
         ColorTile(Color.white);
+        myTower.Price = GameManager.Instance.ClickedBtn.Price;
         GameManager.Instance.BuyTower();
         Walkable = false;
     }

@@ -90,6 +90,10 @@ public class LevelManager : Singleton<LevelManager>
     {
         int tileIndex = int.Parse(tileType);
         TileScript newTile = Instantiate(tilePrefabs[tileIndex]).GetComponent<TileScript>();
+        if (newTile.name.Contains("stone")) 
+        {
+
+        }
         
         newTile.Setup(new Point(x, y), new Vector3(worldStart.x + (TileSize * x), worldStart.y - (TileSize * y), 0), map);
 

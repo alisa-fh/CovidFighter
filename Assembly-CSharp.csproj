@@ -42,6 +42,9 @@
      <Compile Include="Assets\Scripts\Astar\AStarDebugger.cs" />
      <Compile Include="Assets\Scripts\Astar\Node.cs" />
      <Compile Include="Assets\Scripts\BarScript.cs" />
+     <Compile Include="Assets\Scripts\Debuffs\Debuff.cs" />
+     <Compile Include="Assets\Scripts\Debuffs\FireDebuff.cs" />
+     <Compile Include="Assets\Scripts\Debuffs\StoneDebuff.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Hover.cs" />
@@ -53,8 +56,11 @@
      <Compile Include="Assets\Scripts\SpawnPlace.cs" />
      <Compile Include="Assets\Scripts\Stat.cs" />
      <Compile Include="Assets\Scripts\TileScript.cs" />
-     <Compile Include="Assets\Scripts\Tower.cs" />
      <Compile Include="Assets\Scripts\TowerBtn.cs" />
+     <Compile Include="Assets\Scripts\Towers\FireTower.cs" />
+     <Compile Include="Assets\Scripts\Towers\StoneTower.cs" />
+     <Compile Include="Assets\Scripts\Towers\Tower.cs" />
+     <Compile Include="Assets\Scripts\Towers\TowerUpgrade.cs" />
      <None Include="Assets\Resources\Level.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2019.4.16f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

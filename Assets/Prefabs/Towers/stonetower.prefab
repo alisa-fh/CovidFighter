@@ -174,13 +174,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 9175908019177799665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cbd11f378a3f4a77b7fbff3a432d344, type: 3}
+  m_Script: {fileID: 11500000, guid: a9bc774848f4149ed9d4561e41465ca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectileType: StoneProjectile
-  projectileSpeed: 5
-  damage: 7
+  projectileSpeed: 3
+  debuffDuration: 3
+  proc: 25
+  damage: 3
   attackCooldown: 3
+  slowingFactor: 20
 --- !u!58 &4303025084758599531
 CircleCollider2D:
   m_ObjectHideFlags: 0
