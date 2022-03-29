@@ -1,7 +1,7 @@
 # Covid Fighter
 A 2D tile-based tower defence game for my third year Game Development and Multimedia module.
 
-In order to run the game, open the project in Unity and click "build game", toggling "maximise on play" beforehand. Gameplay is straightforward, follow on-screen instructions, and simply use the keypad to click. In order to pause, click the "Escape Key".
+In order to run the game, open the project in Unity and click **_build game_**, toggling **_maximise on play_** beforehand. Gameplay is straightforward, follow on-screen instructions, and simply use the keypad to click. In order to pause, click the **_escape_** key.
 
 This game was created using Unity and written in C#.
 
